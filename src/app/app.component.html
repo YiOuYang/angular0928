@@ -1,5 +1,6 @@
 <app-header (keywordChange)="search($event)"></app-header>
 
+<h1 *ngIf="isLoading">Loading..</h1>
 <div class="home-page">
   <div class="banner">
     <div class="container">

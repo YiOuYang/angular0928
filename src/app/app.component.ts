@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   subtitle = 'A place to share your <u>knowledge</u>.';
 
   articles;
+
+  isLoading = false;
   // get articles() {
   //   return this.articlesService.articles;
   // }
@@ -27,8 +29,20 @@ export class AppComponent implements OnInit {
   }
 
   searchArticle(keyword) {
-    this.articlesService.getArticles(keyword).subscribe(data => {
-      this.articles = data;
-    });
+    this.isLoading = true;
+    const obj = {
+      next: data => {
+        this.articles = data;
+        this.isLoading = false;
+      },
+      error: _ => {
+        console.log(_);
+        this.isLoading = false;
+      },
+      complete: () => {
+        console.log('complete');
+      }
+    };
+    this.articlesService.getArticles(keyword).subscribe(obj);
   }
 }
