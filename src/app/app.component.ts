@@ -96,4 +96,10 @@ export class AppComponent {
       "favoritesCount": 5
     }
   ];
+
+  orignalArticles = this.articles;
+
+  search(keyword) {
+    this.articles = this.orignalArticles.filter(item => item.title.indexOf(keyword) !== -1);
+  }
 }
