@@ -1,27 +1,37 @@
-# AngularDemo
+# 日盛證卷 - Angular 入門實作班 - 原始檔及補充資訊
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## 熱鍵表
 
-## Development server
+- [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+- [Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 常用熱鍵
 
-## Code scaffolding
+1. 全部儲存： 
+- [Win] `ctrl + k, s`
+- [Max] `cmd + option + s`
+2. 切換關聯檔案
+- [Win] `alt + o`
+- [Max] `option + shift + o`
+3. 快速開啟檔案
+- [Win] `ctrl + p`
+- [Max] `cmd + p`
+4. 開啟/關閉左邊的 siderbar
+- [Win] `ctrl + b`
+- [Max] `cmd + b`
+5. 開啟/關閉檔案總管
+- [Win] `ctrl + shift + e`
+- [Max] `cmd + shift + e`
+6. 開啟/關閉搜尋視窗
+- [Win] `ctrl + shift + f`
+- [Max] `cmd + shift + f`
+7. 開啟/關閉原始檔控制(git)
+- `ctrl + shift + g`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 在 Google Chrome 中除錯
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. 按下 `F12`
+2. 切換到 Source 頁籤
+3. 使用 ctrl + p 搜尋要除錯的 `*.ts` 檔案
+4. 插入中斷點
+5. 右邊的 watch 可以加入要監看的變數
