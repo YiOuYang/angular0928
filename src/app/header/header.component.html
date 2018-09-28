@@ -25,4 +25,6 @@
   </div>
   {{ keyword }}
   按鈕被按下去幾次:{{ count }}...
+
+  <a [routerLink]="['/post', count]" [queryParams]="{a: 'b'}" routerLinkActive="router-link-active" >Post</a>
 </nav>

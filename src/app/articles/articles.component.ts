@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from '../articles.service';
 
 @Component({
   selector: 'app-articles',
@@ -6,12 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-  @Input()
   articles;
 
-  constructor() { }
+  constructor(private articlesService: ArticlesService) { }
 
   ngOnInit() {
+
+    this.articlesService.getArticles('').subscribe(data => {
+      this.articles = data;
+    });
   }
 
 }

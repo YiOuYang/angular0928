@@ -19,7 +19,7 @@
         <i class="ion-heart"></i> 29
       </button>
     </div>
-    <a href="post.html" class="preview-link">
+    <a [routerLink]="['/post', item.slug]"  class="preview-link">
       <h1>{{ item.title }}</h1>
       <p>{{ item.description }}</p>
       <span>Read more...</span>

@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
 import { TagsComponent } from './tags/tags.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TagsComponent } from './tags/tags.component';
     FooterComponent,
     FilterArticlesPipe,
     LoginComponent,
-    PostComponent
+    PostComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
