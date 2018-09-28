@@ -15,16 +15,20 @@ export class AppComponent implements OnInit {
   //   return this.articlesService.articles;
   // }
 
-  constructor(public articlesService: ArticlesService) {
+  constructor(private articlesService: ArticlesService) {
   }
 
   ngOnInit() {
-    this.articlesService.getArticles().subscribe(data => {
-      this.articles = data;
-    });
+    this.searchArticle('');
   }
 
   search(keyword) {
-    this.articlesService.search(keyword);
+    this.searchArticle(keyword);
+  }
+
+  searchArticle(keyword) {
+    this.articlesService.getArticles(keyword).subscribe(data => {
+      this.articles = data;
+    });
   }
 }

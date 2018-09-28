@@ -104,8 +104,12 @@ export class ArticlesService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getArticles() {
-    return this.httpClient.get('http://localhost:3000/articles');
+  getArticles(keyword) {
+    return this.httpClient.get(`http://localhost:3000/articles/?q=${keyword}`);
+  }
+
+  getTags() {
+    return this.httpClient.get('http://localhost:3000/tags');
   }
 
   search(keyword) {

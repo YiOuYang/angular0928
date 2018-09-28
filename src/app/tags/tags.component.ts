@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from '../articles.service';
 
 @Component({
   selector: 'app-tags',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent implements OnInit {
-
-  constructor() { }
+  tags: string[];
+  constructor(private articlesService: ArticlesService) {}
 
   ngOnInit() {
+    this.articlesService.getTags().subscribe((tags: string[]) => {
+      this.tags = tags;
+    });
   }
-
 }
