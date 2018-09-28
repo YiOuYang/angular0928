@@ -1,6 +1,9 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <a class="navbar-brand" href="index.html">conduit</a>
+    <a class="navbar-brand" href="index.html"
+      [ngClass]="{'highlight': isHighlight}"
+      [ngStyle]="{'font-size.px': fontSize}"
+    >conduit</a>
     <!-- 不使用 ngModel 時，要完成雙向繫結所需要的程式碼 -->
     <!--
       <input
