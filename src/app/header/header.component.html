@@ -1,10 +1,24 @@
 <nav class="navbar navbar-light">
   <div class="container">
     <a class="navbar-brand" href="index.html">conduit</a>
-    <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
+    <!-- 不使用 ngModel 時，要完成雙向繫結所需要的程式碼 -->
+    <!--
+      <input
+      class="form-control form-control-sm search-input"
+      type="text"
+      placeholder="Keyword"
+      [value]="keyword"
+      #input
+      (input)="keywordInpu(input.value)"> -->
+      <input
+      class="form-control form-control-sm search-input"
+      type="text"
+      placeholder="Keyword"
+      [(ngModel)]="keyword">
     <button class="btn btn-sm btn-primary" (click)="buttonClick($event)">
       <i class="ion-search"></i>
     </button>
   </div>
-  按鈕被按下去幾次:{{ count }}
+  {{ keyword }}
+  按鈕被按下去幾次:{{ count }}...
 </nav>
